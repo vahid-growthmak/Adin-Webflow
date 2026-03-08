@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@astrojs/cloudflare": "^12.6.12",
+    "@astrojs/react": "^4.4.2",
     "astro": "^5.17.1"
+  },
+  "devDependencies": {
+    "@webflow/webflow-cli": "^1.12.4"
   }
 }

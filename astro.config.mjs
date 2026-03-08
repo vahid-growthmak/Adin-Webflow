@@ -1,9 +1,16 @@
-// @ts-check
-import { defineConfig } from 'astro/config';
-import cloudflare from '@astrojs/cloudflare';
+import { defineConfig } from "astro/config";
+import cloudflare from "@astrojs/cloudflare";
+import react from "@astrojs/react";
 
-// https://astro.build/config
+// Webflow Cloud uses a specific mount path. 
+// The builder expects "server" output for SSR.
 export default defineConfig({
-    output: 'static',
-    adapter: cloudflare(),
+    base: "/app",
+    output: "server",
+    adapter: cloudflare({
+        platformProxy: {
+            enabled: true
+        }
+    }),
+    integrations: [react()],
 });
