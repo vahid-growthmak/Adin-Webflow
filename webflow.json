@@ -1,4 +1,6 @@
 {
-    "framework": "astro",
+    "cosmic": {
+        "framework": "astro"
+    },
     "publishDir": "dist"
 }
